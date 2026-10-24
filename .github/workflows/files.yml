@@ -1,0 +1,18 @@
+name: Files
+
+on:
+  workflow_dispatch:
+
+jobs:
+  file-maak-en-lees:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create a directory
+        run: mkdir my-directory
+
+      - name: Create a file with text
+        run: echo "Hello, this is my file!" > my-directory/hello.txt
+
+      - name: Show directory contents
+        run: ls -l my-directory
